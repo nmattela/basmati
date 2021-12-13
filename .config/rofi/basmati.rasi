@@ -1,0 +1,137 @@
+/* RASI Theme */
+
+    
+* {
+	background:                      rgba(75,140,190,0.1568627450980392);
+	bordercolor:                     rgba(0,43,54,0);
+	separatorcolor:                  rgba(0,0,0,0);
+	normal-background:               rgba(253,246,227,0);
+	normal-foreground:               #ffffff;
+	//alternate-normal-foreground:     rgba(255,0,0,0.22745098039215686);
+	selected-normal-background:      rgba(196,171,28,0);
+	selected-normal-foreground:      #f2c01c;
+	active-background:               rgba(253,246,227,0/*.5137254901960784*/);
+	active-foreground:               rgba(255, 255, 255, 1);
+	//alternate-active-background:     rgba(255,77,79,0.35294117647058826);
+	selected-active-background:      rgba(38,139,210,0);
+	selected-active-foreground:      #ffbb00;
+	urgent-background:               rgba(253,246,227,0);
+	urgent-foreground:               #dc322f;
+	alternate-urgent-background:     @urgent-background;//rgba(238,232,213,0);
+	selected-urgent-background:      rgba(220,50,47,0);
+	selected-urgent-foreground:      #ff0004;
+	alternate-normal-foreground:     @normal-foreground;
+	alternate-urgent-foreground:     @urgent-foreground;
+	alternate-active-foreground:     @active-foreground;
+	alternative-active-background:   @active-background;
+	foreground:                      @normal-foreground;
+}
+
+* {
+    spacing:    2;
+    border-color: @foreground;
+    background-color: transparent; 
+}
+#window {
+    border:     1;
+    height: 100%;
+    width: 100%;
+    padding:    25%;
+    background-color: @background;
+}
+#mainbox {
+    border:  0;
+    padding: 0;
+}
+#message {
+    border:  1px dash 0px 0px ;
+    padding: 2px 0px 0px ;
+    border-color: @separatorcolor;
+}
+#textbox {
+    text-color: @foreground;
+}
+#listview {
+    border-color: @separatorcolor;
+}
+#listview {
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+    padding:      70px 0px 0px;
+}
+#element {
+    border: 0;
+    vertical-align: 1;
+}
+#element-text normal.normal {
+    text-color: @normal-foreground;
+    background-color: @normal-background;
+}
+#element-text normal.urgent {
+    text-color: @urgent-foreground;
+    background-color: @urgent-background;
+}
+#element-text normal.active {
+    text-color: @active-foreground;
+    background-color: @active-background;
+    highlight: bold;
+}
+#element-text selected.normal {
+    text-color: @selected-normal-foreground;
+    background-color: @selected-normal-background;
+}
+#element-text selected.urgent {
+    text-color: @selected-urgent-foreground;
+    background-color: @selected-urgent-background;
+}
+#element-text selected.active {
+    text-color: @selected-active-foreground;
+    background-color: @selected-active-background;
+    highlight: bold;
+}
+#element-text alternate.normal {
+    text-color: @alternate-normal-foreground;
+    background-color: @alternate-normal-background;
+}
+#element-text alternate.urgent {
+    text-color: @alternate-urgent-foreground;
+    background-color: @alternate-urgent-background;
+}
+#element-text alternate.active {
+    text-color: @alternate-active-foreground;
+    background-color: @alternate-active-background;
+    highlight: underline;
+}
+#scrollbar {
+    border:  0;
+    width: 4px;
+    padding: 0;
+    handle-color: @normal-foreground;
+}
+#sidebar {
+    border:       2px dash 0px 0px ;
+    border-color: @separatorcolor;
+}
+#button selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+#prompt {
+    enabled: false;
+}
+#case-indicator {
+    enabled: false;
+}
+#inputbar, entry, button {
+    spacing: 0;
+    padding: 0px 960px 0px 0px;
+    font-size: 200;
+    text-color: @normal-foreground;
+}
+#entry {
+    // padding: 0px 0px 0px 960px;
+    // position: center;
+    // vertical-align: 1;
+    // horizontal-align: 1;
+    font: "Ubuntu Mono 50";
+}
