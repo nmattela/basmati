@@ -9,7 +9,7 @@ import os
 
 def main():
     city = "Brussels"
-    api_key = "880c7514a75c6d1ede955f1874790893"
+    api_key = os.environ['OPENWEATHER_API']
 
     try:
         data = urllib.parse.urlencode({'q': city, 'appid': api_key, 'units': 'metric'})
